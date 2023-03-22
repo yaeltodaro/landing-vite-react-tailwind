@@ -5,12 +5,14 @@ import {
   RiCheckboxBlankCircleLine,
   RiStarSFill,
 } from "react-icons/ri";
+import Post from "./Post";
 
 const Hero = () => {
   return (
     <section className="min-h-[90vh] grid grid-cols-1 xl:grid-cols-8">
       <div className="md:col-span-5 md:flex items-center justify-center p-8 xl:p-16">
         <div className="flex flex-col gap-8">
+        <Post slug="hello-world"/> {/* // Esto muestra el post con ese slug */}
           <h1 className="text-5xl xl:text-7xl font-bold leading-[4rem] xl:leading-[7.5rem]">
             Web Design impactful Digital 
             <span className="right-2 top-2 table-cell md:inline md:right-0 md:top-0 text-primary py-2 px-6 m-4 border-8 border-primary relative">
