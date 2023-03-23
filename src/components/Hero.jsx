@@ -8,6 +8,7 @@ import {
 import Post from "./Post";
 
 const Hero = () => {
+  
   return (
     <section className="min-h-[90vh] grid grid-cols-1 xl:grid-cols-8">
       <div className="md:col-span-5 md:flex items-center justify-center p-8 xl:p-16">
