@@ -1,13 +1,14 @@
-import React from "react";
+import React, {useEffect} from "react";
 import {
   RiCheckboxBlankCircleFill,
   RiPlayFill,
   RiCheckboxBlankCircleLine,
   RiStarSFill,
 } from "react-icons/ri";
-import Post from "./Post";
+import Post from "../funciones/Wordpress";
 
-const Hero = () => {
+const Hero = ({post, setPost}) => {
+  
   
   return (
     <section className="min-h-[90vh] grid grid-cols-1 xl:grid-cols-8">
@@ -24,6 +25,7 @@ const Hero = () => {
               <RiCheckboxBlankCircleFill className="text-base absolute -left-3 -bottom-3 text-white ring-8 hover:ring-4 ring-primary rounded-full bg-white" />
             </span>
           </h1>
+          
           <p
             className="text-gray-500 text-2xl leading-[2.5rem] xl:max-w-xl
           "

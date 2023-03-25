@@ -1,21 +1,18 @@
-import Clients from "./components/Clients";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import Reviews from "./components/Reviews";
-import Services from "./components/Services";
-import Works from "./components/Works";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Iniciorick from "./components/Iniciorick";
+import Personaje from "./components/Personaje";
+import Home from "./components/Home"
 
 function App() {
   return (
     <div>
-      <Header />
-      <Hero />
-      <Clients/>
-      <Works/>
-      <Reviews/>
-      <Services/>
-      <Footer/>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/landing-vite-react-tailwind/rick" element={<Iniciorick></Iniciorick>}></Route>
+          <Route path="/landing-vite-react-tailwind/personaje/:id" element={<Personaje></Personaje>}></Route>
+          <Route path="/landing-vite-react-tailwind/" element={ <Home/>}></Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
