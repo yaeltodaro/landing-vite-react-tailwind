@@ -6,9 +6,9 @@ import Home from "./components/Home"
 function App() {
   return (
     <div>
-      <BrowserRouter>
+      <BrowserRouter basename="/landing-vite-react-tailwind">
         <Routes>
-          <Route path="/rick" element={<Iniciorick></Iniciorick>}></Route>
+          <Route path="/landing-vite-react-tailwind/rick" element={<Iniciorick></Iniciorick>}></Route>
           <Route path="/landing-vite-react-tailwind/personaje/:id" element={<Personaje></Personaje>}></Route>
           <Route path="/landing-vite-react-tailwind/" element={ <Home/>}></Route>
         </Routes>
