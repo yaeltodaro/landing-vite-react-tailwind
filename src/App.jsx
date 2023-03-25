@@ -8,7 +8,7 @@ function App() {
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path="/landing-vite-react-tailwind/rick" element={<Iniciorick></Iniciorick>}></Route>
+          <Route path="/rick" element={<Iniciorick></Iniciorick>}></Route>
           <Route path="/landing-vite-react-tailwind/personaje/:id" element={<Personaje></Personaje>}></Route>
           <Route path="/landing-vite-react-tailwind/" element={ <Home/>}></Route>
         </Routes>
