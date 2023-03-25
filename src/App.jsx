@@ -9,7 +9,7 @@ function App() {
       <BrowserRouter basename="/landing-vite-react-tailwind/">
         <Routes>
           <Route exact path="/" element={ <Home/>}></Route>
-          <Route path="/landing-vite-react-tailwind/rick" element={<Iniciorick></Iniciorick>}></Route>
+          <Route path="/rick" element={<Iniciorick></Iniciorick>}></Route>
           <Route path="/personaje/:id" element={<Personaje></Personaje>}></Route>
         </Routes>
       </BrowserRouter>
