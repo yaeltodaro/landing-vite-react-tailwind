@@ -17,7 +17,7 @@ const Iniciorick = () => {
               <div className="hover:bg-violet-200" key={personajes.id}>
                 <a
                   className="font-bold"
-                  href={`/landing-vite-react-tailwind/personaje/${personajes.id}`}
+                  href={`/landing-vite-react-tailwind/#/personaje/${personajes.id}`}
                 >
                   {personajes.name}
                   <img className="rounded-full w-1/2" src={personajes.image} alt="" />
