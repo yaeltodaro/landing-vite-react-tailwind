@@ -37,13 +37,13 @@ const Iniciorick = () => {
                   />
                 </a>
 
-                <p className="text-sm">Especie: {personajes.species}</p>
+                <p className="text-sm">Species: {personajes.species}</p>
                 <p className="text-sm">Location: {personajes.location.name}</p>
                 <a
                   className="text-white bg-green-600 mt-10 p-2 px-4 text-center rounded-md"
                   href={`/landing-vite-react-tailwind/#/personaje/${personajes.id}`}
                 >
-                  Ver más ...
+                  See more ...
                 </a>
               </div>
             ))
