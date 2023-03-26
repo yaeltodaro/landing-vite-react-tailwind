@@ -1,29 +1,38 @@
-import React, {useEffect, useState} from 'react'
-import { useParams } from 'react-router-dom'
-import { unicoPersonaje } from '../funciones/Rickandmorty'
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { unicoPersonaje } from "../funciones/Rickandmorty";
+import Header from "./Header";
 
 const Personaje = () => {
+  const [personaje, setPersonaje] = useState(null);
 
-    const [personaje, setPersonaje] = useState(null)
-
-    const params = useParams()
-    useEffect(()=>{
-        unicoPersonaje(params.id, setPersonaje)
-    },[])
+  const params = useParams();
+  useEffect(() => {
+    unicoPersonaje(params.id, setPersonaje);
+  }, []);
   return (
     <>
-    {personaje != null ? (
-        <div className='p-8'>
+      <Header></Header>
+      {personaje != null ? (
+        <div className="p-8">
+          <h2 className="font-black text-2xl">
+            Personaje con el id {params.id}
+          </h2>
+          <p>con el nombre {personaje.name}</p>
+          <img src={personaje.image} alt="" />
 
-        <h2 className='font-black text-2xl'>Personaje con el id {params.id}</h2>
-        <p>con el nombre {personaje.name}</p>
-        <img src={personaje.image} alt="" />
-    
-        <a className='text-gray-900 font-bold bg-orange-400 mt-4 p-2 px-4' href="/landing-vite-react-tailwind/#/rick">Atrás</a>
+          <a
+            className="text-gray-900 font-bold bg-orange-400 mt-4 p-2 px-4"
+            href="/landing-vite-react-tailwind/#/rick"
+          >
+            Atrás
+          </a>
         </div>
-    ) : ('no hay personaje')}
+      ) : (
+        "no hay personaje"
+      )}
     </>
-  )
-}
+  );
+};
 
-export default Personaje
+export default Personaje;

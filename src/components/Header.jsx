@@ -20,9 +20,9 @@ const Header = () => {
           showMenu ? "left-0" : "-left-full"
         } top-0 right-0 xl:static flex-1 flex flex-col xl:flex-row items-center justify-center gap-10 transition-all duration-500`}>
         <a className="hover:bg-gray-200 p-2 hover:font-bold" href="/landing-vite-react-tailwind/#">Home</a>
-        <a href="/landing-vite-react-tailwind/#/rick">API Rick and Morty</a>
-        <a href="#">Services</a>
-        <a href="#">Product</a>
+        <a className="hover:bg-gray-200 p-2 hover:font-bold" href="/landing-vite-react-tailwind/#/rick">API Rick and Morty</a>
+        <a className="hover:bg-gray-200 p-2 hover:font-bold" href="#">Services</a>
+        <a className="hover:bg-gray-200 p-2 hover:font-bold" href="#">Product</a>
       </nav>
       <button onClick={() => setShowMenu(!showMenu)} className="xl:hidden text-2xl p-2">
       {showMenu ?   <RiCloseFill /> : <RiMenuLine/>} 
