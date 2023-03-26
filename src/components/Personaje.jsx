@@ -19,7 +19,7 @@ const Personaje = () => {
         <p>con el nombre {personaje.name}</p>
         <img src={personaje.image} alt="" />
     
-        <a className='text-gray-900 font-bold bg-orange-400 mt-4 p-2 px-4' href="/landing-vite-react-tailwind/rick">Atrás</a>
+        <a className='text-gray-900 font-bold bg-orange-400 mt-4 p-2 px-4' href="/landing-vite-react-tailwind/#/rick">Atrás</a>
         </div>
     ) : ('no hay personaje')}
     </>
