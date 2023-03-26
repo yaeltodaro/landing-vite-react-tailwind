@@ -19,7 +19,7 @@ const Header = () => {
         className={`fixed xl:static bg-white w-[80%] md:w-[40%] flex xl:w-full h-full z-10 ${
           showMenu ? "left-0" : "-left-full"
         } top-0 right-0 xl:static flex-1 flex flex-col xl:flex-row items-center justify-center gap-10 transition-all duration-500`}>
-        <a href="#">Home</a>
+        <a className="hover:bg-gray-200 p-2 hover:font-bold" href="/landing-vite-react-tailwind/#">Home</a>
         <a href="/landing-vite-react-tailwind/#/rick">API Rick and Morty</a>
         <a href="#">Services</a>
         <a href="#">Product</a>

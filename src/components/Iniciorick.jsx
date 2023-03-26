@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { todosPersonajes } from "../funciones/Rickandmorty";
+import Header from "./Header";
 
 const Iniciorick = () => {
   const [personajes, setPersonajes] = useState(null);
@@ -9,9 +10,9 @@ const Iniciorick = () => {
   }, []);
   return (
     <>
+    <Header></Header>
       <h1 className="text-2xl text-center font-black p-8">Los personajes de Rick and Morty</h1>
       <p className="text-center text-gray-800 pb-10">Datos cargados a tarvés de la API</p>
-      <a className="fixed top-0 bg-green-400 text-white font-bold p-2" href="/landing-vite-react-tailwind/#">Volver a la HOME</a>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 place-content-around gap-8 w-full py-4 px-8">
         {personajes != null
