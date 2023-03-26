@@ -6,10 +6,10 @@ import Home from "./components/Home";
 function App() {
   return (
     <div>
-      <BrowserRouter basename="/landing-vite-react-tailwind/">
-        <HashRouter>
+  
+        <HashRouter basename="/">
           <Routes>
-            <Route exact path="/" element={<Home />}></Route>
+            <Route path="/" element={<Home />}></Route>
             <Route path="/rick" element={<Iniciorick></Iniciorick>}></Route>
             <Route
               path="/personaje/:id"
@@ -17,7 +17,7 @@ function App() {
             ></Route>
           </Routes>
         </HashRouter>
-      </BrowserRouter>
+
     </div>
   );
 }
