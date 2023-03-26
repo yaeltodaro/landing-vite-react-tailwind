@@ -14,12 +14,12 @@ const Personaje = () => {
     <>
       <Header></Header>
       {personaje != null ? (
-        <div className="p-8">
+        <div className="p-8 flex flex-col items-center">
           <h2 className="font-black text-2xl">
             Personaje con el id {params.id}
           </h2>
-          <p>con el nombre {personaje.name}</p>
-          <img src={personaje.image} alt="" />
+          <p>Nombre: {personaje.name}</p>
+          <img className="rounded-full w-[200px]" src={personaje.image} alt="" />
 
           <a
             className="text-gray-900 font-bold bg-orange-400 mt-4 p-2 px-4"
