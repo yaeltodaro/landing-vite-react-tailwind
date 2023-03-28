@@ -1,22 +1,45 @@
 import React, { useEffect, useState } from "react";
 import { todosPersonajes } from "../funciones/Rickandmorty";
 import Header from "./Header";
+import Pagination from "../funciones/Pagination";
 
 const Iniciorick = () => {
   const [personajes, setPersonajes] = useState(null);
 
+  const [info, setInfo] = useState({});
+  const [page, setPage] = useState(1);
+
+  const onPrevius = () => {
+    if (info.prev !== null) {
+      setPage(page - 1);
+    }
+  };
+
+  const onNext = () => {
+    if (info.next !== null) {
+      setPage(page + 1);
+    }
+  };
+
   useEffect(() => {
-    todosPersonajes(setPersonajes);
-  }, []);
+    todosPersonajes(setPersonajes, page);
+  }, [page]);
   return (
     <>
-      <Header></Header>
+      <Header />
       <h1 className="text-2xl text-center font-black p-8">
-        Los personajes de Rick and Morty
+        Personajes de Rick and Morty
       </h1>
       <p className="text-center text-gray-800 pb-10">
         Datos cargados a tarvés de la API
       </p>
+
+      <Pagination
+        prev={1}
+        next={2}
+        onPrevius={onPrevius}
+        onNext={onNext}
+      />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 place-content-center gap-6 w-full py-4 px-8">
         {personajes != null
@@ -49,6 +72,7 @@ const Iniciorick = () => {
             ))
           : "no hay personaje"}
       </div>
+      <Pagination prev={info.prev} next={info.next} />
     </>
   );
 };
